@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		7233C6F320935C8800B6A261 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7233C6F220935C8800B6A261 /* AppDelegate.swift */; };
-		7233C6F520935C8800B6A261 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7233C6F420935C8800B6A261 /* ViewController.swift */; };
 		7233C6F820935C8800B6A261 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7233C6F620935C8800B6A261 /* Main.storyboard */; };
 		7233C6FA20935C8B00B6A261 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7233C6F920935C8B00B6A261 /* Assets.xcassets */; };
 		7233C6FD20935C8B00B6A261 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7233C6FB20935C8B00B6A261 /* LaunchScreen.storyboard */; };
+		7233C70620935D0B00B6A261 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7233C70520935D0B00B6A261 /* DataModel.swift */; };
+		7233C70820935DD300B6A261 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7233C70720935DD300B6A261 /* DataManager.swift */; };
+		7233C70A2093651D00B6A261 /* ToDoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7233C7092093651D00B6A261 /* ToDoTableViewCell.swift */; };
+		7233C70C2093654100B6A261 /* ToDoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7233C70B2093654100B6A261 /* ToDoTableViewController.swift */; };
+		7233C70E2093819C00B6A261 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7233C70D2093819C00B6A261 /* ContainerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7233C6EF20935C8800B6A261 /* TodoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7233C6F220935C8800B6A261 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7233C6F420935C8800B6A261 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7233C6F720935C8800B6A261 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7233C6F920935C8B00B6A261 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7233C6FC20935C8B00B6A261 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7233C6FE20935C8B00B6A261 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7233C70520935D0B00B6A261 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		7233C70720935DD300B6A261 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		7233C7092093651D00B6A261 /* ToDoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableViewCell.swift; sourceTree = "<group>"; };
+		7233C70B2093654100B6A261 /* ToDoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableViewController.swift; sourceTree = "<group>"; };
+		7233C70D2093819C00B6A261 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,26 @@
 		7233C6F120935C8800B6A261 /* TodoApp */ = {
 			isa = PBXGroup;
 			children = (
+				7233C70420935CF900B6A261 /* Model */,
 				7233C6F220935C8800B6A261 /* AppDelegate.swift */,
-				7233C6F420935C8800B6A261 /* ViewController.swift */,
+				7233C70D2093819C00B6A261 /* ContainerViewController.swift */,
+				7233C7092093651D00B6A261 /* ToDoTableViewCell.swift */,
+				7233C70B2093654100B6A261 /* ToDoTableViewController.swift */,
 				7233C6F620935C8800B6A261 /* Main.storyboard */,
 				7233C6F920935C8B00B6A261 /* Assets.xcassets */,
 				7233C6FB20935C8B00B6A261 /* LaunchScreen.storyboard */,
 				7233C6FE20935C8B00B6A261 /* Info.plist */,
 			);
 			path = TodoApp;
+			sourceTree = "<group>";
+		};
+		7233C70420935CF900B6A261 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7233C70520935D0B00B6A261 /* DataModel.swift */,
+				7233C70720935DD300B6A261 /* DataManager.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +155,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7233C6F520935C8800B6A261 /* ViewController.swift in Sources */,
+				7233C70820935DD300B6A261 /* DataManager.swift in Sources */,
+				7233C70A2093651D00B6A261 /* ToDoTableViewCell.swift in Sources */,
 				7233C6F320935C8800B6A261 /* AppDelegate.swift in Sources */,
+				7233C70620935D0B00B6A261 /* DataModel.swift in Sources */,
+				7233C70E2093819C00B6A261 /* ContainerViewController.swift in Sources */,
+				7233C70C2093654100B6A261 /* ToDoTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,7 +311,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.TodoApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.TodoApp1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -305,7 +329,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.TodoApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.TodoApp1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
